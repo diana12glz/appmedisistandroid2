@@ -7,23 +7,62 @@
     tools:context=".VistaCitas">
 
     <LinearLayout
+        android:id="@+id/linearLayout6"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"></LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout10"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/top_dashboard_background"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tus citas"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutVistaCitas"
+        android:layout_width="match_parent"
+        android:layout_height="569dp"
+        android:layout_marginTop="100dp"
+
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout6"
+        tools:layout_editor_absoluteX="32dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:background="@drawable/top_dashboard_background"
-            >
+            android:id="@+id/layVistaCita"
+            android:layout_width="340dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/top_banner_background_white"
+            android:baselineAligned="false"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayoutFecha">
+
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/textViewAddCita"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Tus citas"
+                android:text="Crear Cita"
                 android:textColor="@color/white"
-                android:textSize="25sp"
+                android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -32,55 +71,167 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <LinearLayout
-            android:id="@+id/linearLayoutVistaCitas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="32dp"
-            android:orientation="vertical"
+            android:layout_margin="30dp"
+            android:fontFamily="@font/poppinsbold"
+            android:orientation="vertical">
 
-            >
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/layVistaCita"
-                android:layout_width="340dp"
-                android:layout_height="50dp"
-                android:background="@drawable/top_banner_background_white"
-                android:baselineAligned="false"
-                app:layout_constraintTop_toBottomOf="@+id/textInputLayoutFecha">
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textNombreCita"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Nombre" />
+
+                    <TextView
+                        android:id="@+id/textNombreCita2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/textViewAddCita"
+                    android:id="@+id/textApellidosCita"
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Apellidos" />
+
+                <TextView
+                    android:id="@+id/textApellidosCita2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Crear Cita"
-                    android:textColor="@color/white"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    android:layout_weight="1"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textTipoCita"
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Tipo Cita" />
+
+                <TextView
+                    android:id="@+id/textTipoCita2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="" />
+
+            </LinearLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textFechaCita"
+                        android:layout_width="46dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Fecha Cita" />
+
+                    <TextView
+                        android:id="@+id/textFechaCita2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="" />
+                </LinearLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="150dp"
-                android:layout_marginLeft="20dp">
+                android:layout_weight="1">
 
-                <TextView
-                    android:id="@+id/textViewNoCitas"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Aun no tienes ninguna cita agendada."
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textHoraCita"
+                        android:layout_width="46dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Hora" />
+
+                    <TextView
+                        android:id="@+id/textHoraCita2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textCosto"
+                        android:layout_width="48dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Costo" />
+
+                    <TextView
+                        android:id="@+id/textCosto2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="150dp">
+
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
 

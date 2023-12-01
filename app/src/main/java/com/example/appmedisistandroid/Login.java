@@ -88,7 +88,7 @@ public class Login extends AppCompatActivity {
                             String[] data = new String[2];
                             data[0] = nameLogin;
                             data[1] = passwordLogin;
-                            PutData putData = new PutData("http://192.168.1.149/LoginRegister/LogIn-SignUp-master/login.php", "POST", field, data);
+                            PutData putData = new PutData("http://192.168.18.34/LoginRegister/LogIn-SignUp-master/login.php", "POST", field, data);
                             System.out.println("putData = " + putData);
                             if (putData.startPut()) {
                                 if (putData.onComplete()) {

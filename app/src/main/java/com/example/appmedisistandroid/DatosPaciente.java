@@ -46,7 +46,7 @@ public class DatosPaciente extends AppCompatActivity {
     }
 
     private void LeerWs(){
-        String url ="http://192.168.1.149:4000/api/pacientes/2";
+        String url ="http://192.168.18.34:4000/api/pacientes/2";
         StringRequest postRequest=new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
