@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Medisist</string>
+    <string name="name">Nombre de usuario</string>
+    <string name="password">Contraseña</string>
+    <string name="login">login</string>
+    <string name="signup">signup</string>
+    <string name="email">Correo electronico</string>
+    <string name="loginhere">¿Ya tienes una cuenta? <u>Inicia sesion</u> </string>
+    <string name="signuphere">¿Aun no tienes cuenta? <u>Crear cuenta</u></string>
+    <string name="tipocita">Tipo de Cita</string>
+    <string name="nombrepaciente">Nombre</string>
+    <string name="apellidopaciente">Apellido</string>
+    <string name="direccionpac">Direccion</string>
+
+</resources>
